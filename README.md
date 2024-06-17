@@ -1,57 +1,11 @@
-# Project Name
+# Azure Functions Python Stream Sample
 
-(short, 1-3 sentenced, description of the project)
+The apps in this repo demonstrate the Python HTTP streams feature on Azure Functions.
 
-## Features
+The function app `http_download` receives and processes streaming data from a client in real time. It demonstrates streaming upload capabilities that can be helpful for scenarios like processing continuous data streams and handling event data from IoT devices.
 
-This project framework provides the following features:
+You must use an HTTP client library to make streaming calls to a function's FastAPI endpoints. The client tool or browser you're using might not natively support streaming or could only return the first chunk of data. You can use 'client_script.py' to send streaming data to an HTTP endpoint
 
-* Feature 1
-* Feature 2
-* ...
+The function app `http_upload` is an HTTP triggered function that streams HTTP response data. You might use this functionality to support scenarios like sending event data through a pipeline for real time visualization or detecting anomalies in large sets of data and providing instant notifications.
 
-## Getting Started
-
-### Prerequisites
-
-(ideally very short, if any)
-
-- OS
-- Library version
-- ...
-
-### Installation
-
-(ideally very short)
-
-- npm install [package name]
-- mvn install
-- ...
-
-### Quickstart
-(Add steps to get up and running quickly)
-
-1. git clone [repository clone url]
-2. cd [repository name]
-3. ...
-
-
-## Demo
-
-A demo app is included to show how to use the project.
-
-To run the demo, follow these steps:
-
-(Add steps to start up the demo)
-
-1.
-2.
-3.
-
-## Resources
-
-(Any additional resources or related projects)
-
-- Link to supporting information
-- Link to similar sample
-- ...
+To run these samples, use the instructions in [Getting started with HTTP Streams using Azure Functions in Python](https://techcommunity.microsoft.com/t5/azure-compute-blog/azure-functions-support-for-http-streams-in-python-is-now-in/ba-p/4146697). For any questions or feedback, please file an issue in the [Azure Functions Python worker repository](https://github.com/Azure/azure-functions-python-worker/issues).
